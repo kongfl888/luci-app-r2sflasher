@@ -10,7 +10,7 @@ on:
       - 'po'
       - 'root'
       - 'Makefile'
-      - 'base_rk3328.seed'
+      - 'base_r2s.seed'
 
 jobs:
 

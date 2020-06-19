@@ -8,8 +8,11 @@
 	<label class="cbi-value" style="display:inline-block; width: 130px" for="romfile"><%:Choose File%></label>
 	<input class="cbi-input-file" style="width: 400px" type="file" id="romfile" name="romfile" />
 	<input type="submit" class="cbi-button cbi-input-apply" name="flash" value="<%:Flash%>" />
+    <div class="cbi-value-description"><span class="cbi-value-helpicon"><img src="/luci-static/resources/cbi/help.gif"/></span> <%:Package format%><span> *.sd.img.gz </span></div>
+    <div class="cbi-value-description"><span class="cbi-value-helpicon"><img src="/luci-static/resources/cbi/help.gif"/></span><span>eg.: FriendlyWrt_2020xxx_NanoPi-R2S_arm64_sd.img.gz</span></div>
 <%+cbi/valuefooter%>
 
 <%+cbi/valueheader%>
-	<div class="cbi-value-description"  style="margin-left:20px"><span class="cbi-value-helpicon"><img src="/luci-static/resources/cbi/help.gif"/></span> 项目地址：<a href="https://github.com/kongfl888/luci-app-r2sflasher" target="_blank">roms</a></div>
+
+	<div class="cbi-value-description"  style="margin-left:20px"><span class="cbi-value-helpicon"><img src="/luci-static/resources/cbi/help.gif"/></span> <%:Project Link%><a href="https://github.com/kongfl888/luci-app-r2sflasher" target="_blank">roms</a></div>
 <%+cbi/valuefooter%>

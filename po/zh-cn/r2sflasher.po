@@ -8,7 +8,7 @@ msgid "Flash ROM"
 msgstr "刷写 ROM"
 
 msgid "Choose Your NanoPi R2S ROM zip File to Flash"
-msgstr "选择 NanoPi R2S ROM zip 压缩文件"
+msgstr "选择 NanoPi R2S ROM 压缩文件"
 
 msgid "No Specify ROM File."
 msgstr "找不到 ROM 文件"
@@ -24,3 +24,9 @@ msgstr "选择 ROM 文件"
 
 msgid "Flash"
 msgstr "刷写"
+
+msgid "Project Link"
+msgstr "项目地址："
+
+msgid "Package format"
+msgstr "固件包名可以是："

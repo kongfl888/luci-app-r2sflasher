@@ -10,4 +10,6 @@
 
 建议：刷机全新刷机，不保留配置那种。
 
-fork自[luci-app-r2sflasher](https://github.com/songchenwen/nanopi-r2s/tree/master/luci-app-r2sflasher)
+fork自[scw的r2s](https://github.com/songchenwen/nanopi-r2s/tree/master/luci-app-r2sflasher)
+
+这里将源代码独立出库，并开始对其建库维护

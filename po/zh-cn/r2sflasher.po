@@ -28,5 +28,11 @@ msgstr "刷写"
 msgid "Project Link"
 msgstr "项目地址："
 
+msgid "Rom Link"
+msgstr "固件下载："
+
 msgid "Package format"
 msgstr "固件包名可以是："
+
+msgid "eg"
+msgstr "如："

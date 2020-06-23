@@ -1,8 +1,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-r2sflasher
-PKG_VERSION:=1.1.K
-PKG_RELEASE:=1
+PKG_VERSION:=1.1-K
+PKG_RELEASE:=2
 PKG_DATE:=20200620
 
 include $(INCLUDE_DIR)/package.mk
@@ -38,6 +38,8 @@ endef
 define Package/$(PKG_NAME)/postinst
 #!/bin/sh
 chmod a+x $${IPKG_INSTROOT}/usr/bin/rom_flash >/dev/null 2>&1
+rm -rf /tmp/luci-modulecache/ >/dev/null 2>&1 || echo ""
+rm -f /tmp/luci-modulecache >/dev/null 2>&1 || echo ""
 exit 0
 endef
 

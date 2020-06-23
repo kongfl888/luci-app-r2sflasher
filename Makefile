@@ -38,9 +38,14 @@ endef
 define Package/$(PKG_NAME)/postinst
 #!/bin/sh
 chmod a+x $${IPKG_INSTROOT}/usr/bin/rom_flash >/dev/null 2>&1
-rm -rf /tmp/luci-modulecache/ >/dev/null 2>&1 || echo ""
-rm -f /tmp/luci-modulecache >/dev/null 2>&1 || echo ""
 exit 0
+endef
+
+define Package/$(PKG_NAME)/postrm
+#!/bin/sh
+    rm -rf /tmp/luci-modulecache/ >/dev/null 2>&1 || echo ""
+    rm -f /tmp/luci-indexcache >/dev/null 2>&1 || echo ""
+    exit 0
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))

@@ -1,10 +1,10 @@
 # NanoPi R2S 图形化刷机工具
 
-![r2sflasher](images/luci-app-r2sflasher.png)
+![r2s_luci-app-r2sflasher](https://github.com/kongfl888/luci-app-r2sflasher/workflows/r2s_luci-app-r2sflasher/badge.svg)
 
 支持上传固件包、图形化刷机。
 
-固件包名为：*.sd.img.gz
+固件包名为：\*.sd.img.gz
 
 如：FriendlyWrt_2020xxx_NanoPi-R2S_arm64_sd.img.gz
 

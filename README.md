@@ -18,4 +18,4 @@ fork自[scw的r2s](https://github.com/songchenwen/nanopi-r2s/tree/master/luci-ap
 
 安装：将 ipk 上传到路由器，安装。（你可以使用 系统-->文件传输 进行上传和安装操作）
 
-[R2S-ROM](https://github.com/kongfl888/nanopi-openwrt)
+[R2S-ROM](https://github.com/kongfl888/OpenWrt4R2S)

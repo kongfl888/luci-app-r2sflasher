@@ -6,9 +6,9 @@ on:
       - master
     paths:
       - '.github/workflows/main.yml'
-      - 'luasrc/*'
-      - 'po/*'
-      - 'root/*'
+      - 'luasrc/**'
+      - 'po/**'
+      - 'root/**'
       - 'Makefile'
       - 'base_r2s.seed'
 

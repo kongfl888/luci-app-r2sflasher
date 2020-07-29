@@ -18,7 +18,7 @@ for i in "${needed_binaries[@]}"; do
     fi
 done
 if ! [ "$need_warn" == "" ]; then
-    echo "无法刷机, 需要这些可执行文件 $need_warn"
+    echo "无法刷机, 这些文件 $need_warn 没有或丢失了。拔卡刷吧！"
     exit 1
 fi
 

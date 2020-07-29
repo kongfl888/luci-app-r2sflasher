@@ -46,7 +46,7 @@ jobs:
         run: |
           mkdir friendlywrt-rk3328
           cd friendlywrt-rk3328
-          repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master-v19.07.1 -m rk3328.xml --repo-url=https://github.com/friendlyarm/repo --no-clone-bundle --depth=1
+          repo init -u https://github.com/kongfl888/friendlywrt_manifests -b master-v19.07.3 -m rk3328.xml --repo-url=https://github.com/friendlyarm/repo  --no-clone-bundle --depth=1
           repo sync -c --no-tags --no-clone-bundle -j8
           cd friendlywrt/ && git fetch --unshallow
 
@@ -56,12 +56,10 @@ jobs:
           sed -i '/=m/d;/CONFIG_IB/d;/CONFIG_SDK/d;/CONFIG_BUILDBOT/d;/CONFIG_ALL_KMODS/d;/CONFIG_ALL_NONSHARED/d;/docker/d;/DOCKER/d;/CONFIG_DISPLAY_SUPPORT/d;/CONFIG_AUDIO_SUPPORT/d;/CONFIG_OPENSSL_PREFER_CHACHA_OVER_GCM/d;/CONFIG_VERSION/d;/SAMBA/d;/samba/d;/modemmanager/d;' configs/config_rk3328
           cat configs/config_rk3328 | grep "TARGET" >> ../base_r2s.seed
           cat ../base_r2s.seed > configs/config_rk3328
+          sed -i '/luci-app/d' configs/config_rk3328
           cd friendlywrt
           git config --local user.email "action@github.com" && git config --local user.name "GitHub Action"
-          git remote add upstream https://github.com/coolsnowwolf/lede && git fetch upstream
-          git rebase adc1a9a3676b8d7be1b48b5aed185a94d8e42728^ --onto upstream/master -X theirs
-          rm target/linux/rockchip-rk3328/patches-4.14/0001-net-thunderx-workaround-BGX-TX-Underflow-issue.patch
-          git checkout upstream/master -- feeds.conf.default
+          rm -f target/linux/rockchip-rk3328/patches-*/*.patch
           sed -i '5s/#src-git/src-git/g' feeds.conf.default
 
       - name: Clean Feeds
@@ -84,7 +82,8 @@ jobs:
         run: |
           cd friendlywrt-rk3328
           sed -i 's/set -eu/set -u/' scripts/mk-friendlywrt.sh
-          ./build.sh nanopi_r2s.mk
+          wget https://raw.githubusercontent.com/kongfl888/friendlywrt_device_rk3328/master/rk3328/nanopi_r2s.mk -O .current_config.mk
+          ./build.sh friendlywrt
 
       - name: Assemble Artifact
         id: assemble_artifact

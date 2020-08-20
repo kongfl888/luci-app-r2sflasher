@@ -19,6 +19,7 @@ for i in "${needed_binaries[@]}"; do
 done
 if ! [ "$need_warn" == "" ]; then
     echo "无法刷机, 这些文件 $need_warn 没有或丢失了。拔卡刷吧！"
+    echo "你还可以自行安装 $need_warn 后再进行刷机。"
     exit 1
 fi
 
@@ -184,7 +185,8 @@ if [ -f "$zstfile" ]; then
 
     echo "开始刷机, 请不要断电或关机, 如果刷机失败请取出 SD 卡用电脑重新写入 ROM"
     pv -f -F "刷机中, 请不要断电或关机 %e %p" -i 1 "$zstfile" | zstdcat | dd of=/dev/mmcblk0 conv=fsync
-    echo "刷机完毕, 正在重启, 请稍候..."
+    DATE=`date +[%Y-%m-%d]%H:%M:%S`
+    echo "[$DATE]刷机完毕, 正在重启, 请稍候..."
     sleep 5
     echo o > /proc/sysrq-trigger
 else

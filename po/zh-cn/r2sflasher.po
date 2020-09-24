@@ -36,3 +36,6 @@ msgstr "固件包名可以是："
 
 msgid "eg"
 msgstr "如："
+
+msgid "1.5G space required"
+msgstr "请确保SD卡至少有1.5G空间空闲"

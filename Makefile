@@ -1,9 +1,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-r2sflasher
-PKG_VERSION:=1.1-K
-PKG_RELEASE:=2
-PKG_DATE:=20200620
+PKG_VERSION:=1.2
+PKG_RELEASE:=1-K
+PKG_DATE:=20200930
 
 include $(INCLUDE_DIR)/package.mk
 

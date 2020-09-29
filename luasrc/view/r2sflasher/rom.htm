@@ -1,24 +1,26 @@
 <%+cbi/valueheader%>
+	<hr />
 	<label class="cbi-value" style="display:inline-block; width: 142px" for="keep_config"><%:Keep Configs%></label>
 	<input class="cbi-input-checkbox" type="checkbox" id="keep_config" name="keep_config" />
-	<div class="cbi-value-description"><span class="cbi-value-helpicon"><img src="/luci-static/resources/cbi/help.gif"/></span> <%:compatibility unchecked%></div>
+	<div class="cbi-value-description cbi-value" style="margin-left: 0.3rem;"><span class="cbi-value-helpicon"></span> <%:compatibility unchecked%></div>
+	<hr />
 <%+cbi/valuefooter%>
 
 <%+cbi/valueheader%>
 	<label class="cbi-value" style="display:inline-block; width: 142px" for="romfile"><%:Choose File%></label>
 	<input class="cbi-input-file" style="width: 400px" type="file" id="romfile" name="romfile" />
 	<input type="submit" class="cbi-button cbi-input-apply" name="flash" value="<%:Flash%>" />
-    <div class="cbi-value-description"><span class="cbi-value-helpicon"><img src="/luci-static/resources/cbi/help.gif"/></span> <%:Package format%><span> *.sd.img.gz </span><span>( <%:eg%> FriendlyWrt_2020xxx_NanoPi-R2S_arm64_sd.img.gz )</span></div>
+	<div class="cbi-value-description cbi-value" style="margin-left: 0.3rem;"><span class="cbi-value-helpicon" ></span> <%:Package format%><span> *.sd.img.gz </span><span>( <%:eg%> FriendlyWrt_2020xxx_NanoPi-R2S_arm64_sd.img.gz )</span></div>
 <%+cbi/valuefooter%>
 
 <%+cbi/valueheader%>
-    <div class="cbi-value-description"  style="margin-left:20px">
-        <span class="cbi-value-helpicon"><img src="/luci-static/resources/cbi/help.gif"/></span> <%:1.5G space required%>
+    <div class="cbi-value-description cbi-value"  style="margin-left: 0.3rem;">
+        <span class="cbi-value-helpicon"></span> <%:1.5G space required%>
     </div>
 <%+cbi/valuefooter%>
 
 <%+cbi/valueheader%>
-    <div class="cbi-value-description"  style="margin-left:20px">
-        <span class="cbi-value-helpicon"><img src="/luci-static/resources/cbi/help.gif"/></span> <%:Project Link%> <a href="https://github.com/kongfl888/luci-app-r2sflasher" target="_blank">Github</a><span> | </span><a href="https://github.com/kongfl888/OpenWrt4R2S" target="_blank">Rom</a>
+    <div class="cbi-value-description cbi-value"  style="margin-left: 0.3rem;">
+        <span class="cbi-value-helpicon"></span> <%:Project Link%> <a href="https://github.com/kongfl888/luci-app-r2sflasher" target="_blank">Github</a><span> | </span><a href="https://github.com/kongfl888/OpenWrt4R2S" target="_blank">Rom</a>
     </div>
 <%+cbi/valuefooter%>

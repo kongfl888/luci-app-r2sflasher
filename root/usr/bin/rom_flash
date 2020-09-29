@@ -23,6 +23,11 @@ if ! [ "$need_warn" == "" ]; then
     exit 1
 fi
 
+# make sure it works or not work...
+if [ -f "/etc/init.d/check-network" ]; then
+    /etc/init.d/check-network stop
+fi
+
 workingdir=/root/r2sflasher/
 
 rm -rf $workingdir
